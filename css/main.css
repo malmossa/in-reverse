@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #38471f;
-  --secondary-color: #7fa046;
-  --dark-color: #556b2f;
+  --primary-color: #3b557c;
+  --secondary-color: #ff0045;
+  --dark-color: #1a1a1a;
   --white-color: #e7e7e7;
 }
 
@@ -28,12 +28,11 @@ h6 {
 
 footer .social > a {
   color: var(--white-color);
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 footer .social > a:hover {
   opacity: 0.9;
-  color: var(--secondary-color);
 }
 
 main > .container {
