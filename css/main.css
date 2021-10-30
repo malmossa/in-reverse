@@ -5,6 +5,11 @@
   --white-color: #e7e7e7;
 }
 
+@font-face {
+  font-family: Medusa Gothic;
+  src: url(/fonts/MedusaGothic\ D.otf);
+}
+
 body {
   color: var(--dark-color);
 }
@@ -24,6 +29,17 @@ h4,
 h5,
 h6 {
   color: var(--primary-color);
+}
+
+/* FOOTER */
+footer h4 {
+  font-family: Medusa Gothic;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+footer span {
+  color: #e34c26;
 }
 
 footer .social > a {
