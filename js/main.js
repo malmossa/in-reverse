@@ -7,6 +7,7 @@ const message = document.getElementById("message");
 // Event Listener
 btnSubmit.addEventListener("click", reverseAstring);
 
+// The function to reverse the string
 function reverseAstring() {
   const input = userInput.value;
   let stringInReverse = "";

@@ -57,24 +57,46 @@
 
     <main class="flex-shrink-0">
       <div class="container py-5 px-5 mt-5">
-        <h2>The Code for APP NAME.</h2>
+        <h2>The Code for IN REVERSE.</h2>
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers">
               <code class="language-javascript">
-                function helloWorld() {
-                  alert("Hello World!");
+                // All Selectors
+                const userInput = document.getElementById("userString");
+                const btnSubmit = document.getElementById("btnSubmit");
+                const alertBox = document.getElementById("alert");
+                const message = document.getElementById("message");
+
+                // Event Listener
+                btnSubmit.addEventListener("click", reverseAstring);
+
+                // The function to reverse the string
+                function reverseAstring() {
+                  const input = userInput.value;
+                  let stringInReverse = "";
+
+                  for (let i = input.length - 1; i >= 0; i--) {
+                    stringInReverse += input[i];
                   }
+
+                  message.innerHTML = stringInReverse;
+                  alertBox.classList.remove("invisible");
+                }
               </code>
             </pre>
           </div>
           <div class="col-lg-4">
-            <p>The Code is structed in one function.</p>
-            <h5>Hello World</h5>
-            <p>
-              Hello world is a function that display an alert with a message of
-              "Hello World".
-            </p>
+            <h5>My thought process when writing this app</h5>
+            <ol>
+              <li>On the top i assign all the selectors to a variables.</li>
+              <li>
+                I have the event listener on separate line for easy viewing.
+              </li>
+              <li>
+                Sence this a simple operation i just made it into one function.
+              </li>
+            </ol>
           </div>
         </div>
       </div>
