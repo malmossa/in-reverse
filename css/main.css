@@ -31,6 +31,14 @@ h6 {
   color: var(--primary-color);
 }
 
+/* Styling for the reverse text */
+#message {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 2rem;
+}
+
 /* FOOTER */
 footer h4 {
   font-family: Medusa Gothic;
