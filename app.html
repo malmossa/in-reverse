@@ -48,7 +48,6 @@
               href="https://github.com/malmossa/in-reverse"
               >GitRepo</a
             >
-            <a class="nav-link" target="_blank" href="#">About</a>
           </div>
         </div>
       </div>
@@ -77,11 +76,18 @@
                   placeholder="Enter A String"
                   aria-label="Enter A String"
                 />
-              </div>
-              <div class="col d-flex">
-                <button type="button" id="btnSubmit" class="btn btn-danger">
-                  Reverse Me
-                </button>
+                <div class="col d-flex flex-row-reverse m-1">
+                  <button type="button" id="btnClear" class="btn btn-dark">
+                    Start Over
+                  </button>
+                  <button
+                    type="button"
+                    id="btnSubmit"
+                    class="btn btn-primary m-1"
+                  >
+                    Reverse
+                  </button>
+                </div>
               </div>
               <div
                 class="alert alert-success mt-5 invisible fade show"
@@ -118,11 +124,6 @@
               <div class="col social">
                 <a href="https://github.com/malmossa" target="_blank"
                   ><i class="fab fa-github fa-2x"></i
-                ></a>
-              </div>
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-twitter fa-2x"></i
                 ></a>
               </div>
             </div>
