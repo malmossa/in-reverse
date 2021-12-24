@@ -1,11 +1,13 @@
 // All Selectors
-const userInput = document.getElementById("userString");
+let userInput = document.getElementById("userString");
 const btnSubmit = document.getElementById("btnSubmit");
+const btnClear = document.getElementById("btnClear");
 const alertBox = document.getElementById("alert");
 const message = document.getElementById("message");
 
 // Event Listener
 btnSubmit.addEventListener("click", reverseAstring);
+btnClear.addEventListener("click", startOver);
 
 // The function to reverse the string
 function reverseAstring() {
@@ -18,4 +20,11 @@ function reverseAstring() {
 
   message.innerHTML = stringInReverse;
   alertBox.classList.remove("invisible");
+}
+
+// The function to start over
+function startOver() {
+  message.innerHTML = "";
+  alertBox.classList.add("invisible");
+  userInput.value = "";
 }

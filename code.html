@@ -49,7 +49,6 @@
               href="https://github.com/malmossa/in-reverse"
               >GitRepo</a
             >
-            <a class="nav-link" target="_blank" href="#">About</a>
           </div>
         </div>
       </div>
@@ -62,27 +61,36 @@
           <div class="col-lg-8">
             <pre class="line-numbers">
               <code class="language-javascript">
-                // All Selectors
-                const userInput = document.getElementById("userString");
-                const btnSubmit = document.getElementById("btnSubmit");
-                const alertBox = document.getElementById("alert");
-                const message = document.getElementById("message");
+                  // All Selectors
+                  let userInput = document.getElementById("userString");
+                  const btnSubmit = document.getElementById("btnSubmit");
+                  const btnClear = document.getElementById("btnClear");
+                  const alertBox = document.getElementById("alert");
+                  const message = document.getElementById("message");
 
-                // Event Listener
-                btnSubmit.addEventListener("click", reverseAstring);
+                  // Event Listener
+                  btnSubmit.addEventListener("click", reverseAstring);
+                  btnClear.addEventListener("click", startOver);
 
-                // The function to reverse the string
-                function reverseAstring() {
-                  const input = userInput.value;
-                  let stringInReverse = "";
+                  // The function to reverse the string
+                  function reverseAstring() {
+                    const input = userInput.value;
+                    et stringInReverse = "";
 
-                  for (let i = input.length - 1; i >= 0; i--) {
-                    stringInReverse += input[i];
+                    for (let i = input.length - 1; i >= 0; i--) {
+                      stringInReverse += input[i];
+                    }
+
+                    message.innerHTML = stringInReverse;
+                    alertBox.classList.remove("invisible");
                   }
 
-                  message.innerHTML = stringInReverse;
-                  alertBox.classList.remove("invisible");
-                }
+                  // The function to start over
+                  function startOver() {
+                    message.innerHTML = "";
+                    alertBox.classList.add("invisible");
+                    userInput.value = "";
+                  }
               </code>
             </pre>
           </div>
@@ -120,11 +128,6 @@
               <div class="col social">
                 <a href="https://github.com/malmossa" target="_blank"
                   ><i class="fab fa-github fa-2x"></i
-                ></a>
-              </div>
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-twitter fa-2x"></i
                 ></a>
               </div>
             </div>
